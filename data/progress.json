@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "username": "savaqe21",
+    "displayName": "savaqe21",
+    "platform": "TryHackMe",
+    "lastUpdated": "2026-08-16",
+    "tagline": "Offensive security progress, visualized."
+  },
+  "challenges": {
+    "label": "Challenges",
+    "hard": { "done": 1, "total": 104 },
+    "medium": { "done": 7, "total": 230 },
+    "easy": { "done": 10, "total": 188 }
+  },
+  "categories": [
+    {
+      "id": "paths",
+      "label": "Paths",
+      "color": "#3ee8b5",
+      "all": 19,
+      "done": 6,
+      "inProgress": 6,
+      "notStarted": 7
+    },
+    {
+      "id": "walkthroughs",
+      "label": "Walkthroughs",
+      "color": "#67e8f9",
+      "all": 617,
+      "done": 134,
+      "inProgress": 0,
+      "notStarted": 447
+    },
+    {
+      "id": "modules",
+      "label": "Modules",
+      "color": "#a78bfa",
+      "all": 131,
+      "done": 34,
+      "inProgress": 17,
+      "notStarted": 66
+    },
+    {
+      "id": "networks",
+      "label": "Networks",
+      "color": "#38bdf8",
+      "all": 23,
+      "done": 4,
+      "inProgress": 0,
+      "notStarted": 19
+    },
+    {
+      "id": "ai-upskilling",
+      "label": "AI Upskilling",
+      "color": "#f0abfc",
+      "all": 97,
+      "done": 13,
+      "inProgress": 0,
+      "notStarted": 84
+    },
+    {
+      "id": "recent-threats",
+      "label": "Recent Threats",
+      "color": "#fb7185",
+      "all": 25,
+      "done": 1,
+      "inProgress": 0,
+      "notStarted": 24
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-08-16",
+      "completed": 210
+    }
+  ]
+}

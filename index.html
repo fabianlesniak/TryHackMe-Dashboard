@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TryHackMe Dashboard</title>
+    <meta name="description" content="Personal TryHackMe progress dashboard — challenges, paths, modules, and more." />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true">
+      <span class="orb orb-a"></span>
+      <span class="orb orb-b"></span>
+      <span class="grid"></span>
+      <span class="scanlines"></span>
+    </div>
+
+    <div class="app">
+      <header class="topbar glass">
+        <div class="brand">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="28" height="28">
+              <rect x="1.5" y="1.5" width="29" height="29" rx="7" fill="none" stroke="currentColor" stroke-width="1.4" />
+              <path d="M9 21V11h5.2c2.4 0 3.9 1.4 3.9 3.5 0 2.2-1.6 3.6-4 3.6H11.4V21H9zm2.4-4.6h2.5c1.2 0 1.9-.7 1.9-1.7s-.7-1.6-1.9-1.6h-2.5v3.3zM22.2 21h-2.3l-3.2-10h2.5l2.1 7.2 2.1-7.2h2.4l-3.6 10z" fill="currentColor" />
+            </svg>
+          </span>
+          <div>
+            <p class="eyebrow">TRYHACKME // OPS</p>
+            <h1>Progress Dashboard</h1>
+          </div>
+        </div>
+        <div class="topbar-meta">
+          <span class="pill" id="user-pill">loading</span>
+          <span class="pill dim" id="sync-pill">syncing…</span>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero-grid">
+          <article class="glass hero-card">
+            <p class="eyebrow">Overall completion</p>
+            <h2 id="hero-title">Command center</h2>
+            <p class="lede" id="hero-tagline">Loading progress data…</p>
+            <div class="hero-kpis" id="hero-kpis"></div>
+          </article>
+
+          <article class="glass ring-card">
+            <div class="ring-wrap">
+              <svg class="ring" viewBox="0 0 140 140" role="img" aria-labelledby="overall-label">
+                <title id="overall-label">Overall completion</title>
+                <circle class="ring-track" cx="70" cy="70" r="56" />
+                <circle class="ring-value" id="overall-ring" cx="70" cy="70" r="56" />
+              </svg>
+              <div class="ring-center">
+                <strong id="overall-pct">0%</strong>
+                <span>complete</span>
+              </div>
+            </div>
+            <p class="ring-caption" id="overall-caption">—</p>
+          </article>
+        </section>
+
+        <section class="kpi-row" id="kpi-row"></section>
+
+        <section class="panel glass">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Difficulty split</p>
+              <h2>Challenges</h2>
+            </div>
+            <p class="panel-stat" id="challenges-summary"></p>
+          </div>
+          <div class="challenge-grid" id="challenge-grid"></div>
+        </section>
+
+        <section>
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Learning tracks</p>
+              <h2>Category breakdown</h2>
+            </div>
+          </div>
+          <div class="category-grid" id="category-grid"></div>
+        </section>
+
+        <section class="panel glass">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Signal</p>
+              <h2>Completion by category</h2>
+            </div>
+            <div class="legend">
+              <span><i class="swatch done"></i> Completed</span>
+              <span><i class="swatch progress"></i> In progress</span>
+            </div>
+          </div>
+          <div class="chart-wrap">
+            <svg id="trend-chart" viewBox="0 0 920 280" preserveAspectRatio="xMidYMid meet"></svg>
+          </div>
+        </section>
+      </main>
+
+      <footer class="foot">
+        <p>Edit <code>data/progress.json</code> and refresh — the dashboard rebuilds itself.</p>
+      </footer>
+    </div>
+
+    <div class="error-overlay" id="error-overlay" hidden>
+      <div class="glass error-card">
+        <p class="eyebrow">Unable to load data</p>
+        <h2>progress.json not reachable</h2>
+        <p>Open this dashboard through a local server so the JSON file can be fetched:</p>
+        <pre>python3 -m http.server 8080</pre>
+        <p>Then visit <code>http://localhost:8080</code></p>
+      </div>
+    </div>
+
+    <script src="assets/js/dashboard.js" type="module"></script>
+  </body>
+</html>
