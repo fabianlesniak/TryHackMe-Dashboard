@@ -4,7 +4,7 @@
     "displayName": "savaqe21",
     "platform": "TryHackMe",
     "lastUpdated": "2026-08-16",
-    "tagline": "Offensive security progress, visualized."
+    "tagline": "TryHackMe progress, visualized."
   },
   "challenges": {
     "label": "Challenges",
@@ -26,10 +26,10 @@
       "id": "walkthroughs",
       "label": "Walkthroughs",
       "color": "#67e8f9",
-      "all": 617,
-      "done": 134,
+      "all": 752,
+      "done": 158,
       "inProgress": 0,
-      "notStarted": 447
+      "notStarted": 594
     },
     {
       "id": "modules",
@@ -71,7 +71,7 @@
   "history": [
     {
       "date": "2026-08-16",
-      "completed": 210
+      "completed": 234
     }
   ]
 }
